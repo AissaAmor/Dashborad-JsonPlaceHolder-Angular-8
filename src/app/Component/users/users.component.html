@@ -1,0 +1,41 @@
+<!-- <h1>Les utilisateurs</h1>
+<ul>
+    <li *ngFor="let user of users" >
+        <div class="card text-black bg-light mt-4" >
+            <div class="card-header">{{ user.name }}</div>
+            <div class="card-body">
+                <h5 class="card-title">Email : {{ user.email }}</h5>
+                <h5 class="card-title">Address :</h5>
+                <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Street : {{ user.address.street }}</p>
+                <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City &nbsp;&nbsp;&nbsp;: {{ user.address.city }}</p>
+                <button class="bg-light text-primary">Détail</button> -->
+<!-- <a routerLink="{{user.id}}" class="bg-light text-primary" >Détail</a>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </li>
+</ul> -->
+<!-- <hr><br><br> -->
+<!-- <div class="col-lg-4 col-md-6"> -->
+<!--Card-->
+<div class="row">
+    <div class="col-md-3 mx-auto my-5" *ngFor="let user of users">
+        <mdb-card cascade="true" wider="true">
+            <div class="view view-cascade gradient-card-header blue-gradient text-center">
+                <h3 class="card-header-title mb-2">{{ user.name }}</h3>
+            </div>
+            <mdb-card-body cascade="true" class="text-left">
+                <h4 class="card-header-title mb-2">{{ user.email }}</h4>
+                <h4 class="card-header-title mb-2">{{ user.address.street }}</h4>
+                <h4 class="card-header-title mb-2">{{ user.address.city }}</h4>
+                <!-- <mdb-card-text>Email : {{ user.email }}</mdb-card-text> -->
+                <!-- <mdb-card-text> Street : {{ user.address.street }}</mdb-card-text>
+                    <mdb-card-text>{{ user.address.city }}</mdb-card-text> -->
+
+                <a routerLink="{{user.id}}" class="blue-text mt-1 d-flex flex-row-reverse">
+                    <h5 class="waves-effect p-2" mdbWavesEffect>Read more...</h5>
+                </a>
+            </mdb-card-body>
+        </mdb-card>
+    </div>
+    <!-- </div> -->

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row min-vh-100 flex-column flex-md-row">
+    <aside class="col-12 col-md-1 p-0 bg-dark flex-shrink-1">
+      <nav
+        class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start py-2"
+      >
+        <div class="collapse navbar-collapse ">
+          <ul
+            class="flex-md-column flex-row navbar-nav w-100 justify-content-between"
+          >
+            <li class="nav-item">
+              <a routerLink="/users" class="nav-link pl-0 text-nowrap"
+                ><i
+                  class="fa fa-maps fa-fw"
+                  style="font-size:35px; margin-left: 20px;"
+                ></i>
+                <span class="font-weight-bold"></span
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/posts" class="nav-link pl-0 text-nowrap"
+                ><i
+                  class="fa fa-edit fa-fw"
+                  style="font-size:35px; margin-left: 20px;"
+                ></i>
+                <span class="font-weight-bold"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    <main class="col bg-faded py-3 flex-grow-1">
+      <!-- <button ">valider</button> -->
+      <!-- <app-users></app-users>
+            <app-posts></app-posts> -->
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

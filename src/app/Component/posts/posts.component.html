@@ -1,0 +1,16 @@
+<h1>Les posts</h1>
+<div class="row">
+    <div class="col-md-4 mx-auto my-5" *ngFor="let post of posts">
+        <div class="card text-black bg-light mt-4">
+                <div class="card-header">Post N°&nbsp;:&nbsp;{{ post.id}}</div>
+                <div class="card-body">
+                <h5 class="card-title">{{ post.title}}</h5>
+                <p class="card-text">{{ post.body}}</p>
+                <button routerLink="{{post.id}}" mdbBtn type="button" color="primary" rounded="true" outline="true"
+                    mdbWavesEffect>Détail</button>
+                    <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<hr><br><br>

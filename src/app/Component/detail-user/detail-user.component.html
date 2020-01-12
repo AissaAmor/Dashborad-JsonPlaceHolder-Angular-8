@@ -1,0 +1,42 @@
+<h1>Detail d'utilisateur</h1>
+
+<div class="card text-black bg-light mt-4">
+    <div class="card-header">{{ detusers.name }}</div>
+    <div class="card-body">
+        <h5 class="card-title">Email : {{ detusers.email }}</h5>
+        <h5 class="card-title">phone : {{ detusers.phone }}</h5>
+        <h5 class="card-title">username : {{ detusers.username }}</h5>
+        <h5 class="card-title">website : {{ detusers.website }}</h5>
+        <h5 class="card-title">Address :</h5>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City &nbsp;&nbsp;&nbsp;: {{ detusers.address.city }}</p>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Street : {{ detusers.address.street }}</p>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zip &nbsp;&nbsp;&nbsp;: {{ detusers.address.zipcode }}</p>
+        <h6 class="card-title">&nbsp;&nbsp;&nbsp;&nbsp;Geographie :</h6>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat &nbsp;&nbsp;&nbsp;: {{ detusers.address.geo.lat }}</p>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng &nbsp;&nbsp;&nbsp;: {{ detusers.address.geo.lng }}</p>
+        <h5 class="card-title">Company :</h5>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BS &nbsp;&nbsp;&nbsp;: {{ detusers.company.bs }}</p>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catchPhrase &nbsp;&nbsp;&nbsp;:
+            {{ detusers.company.catchPhrase }}</p>
+        <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name &nbsp;&nbsp;&nbsp;: {{ detusers.company.name }}</p>
+    </div>
+</div>
+<h1 class="text-success text-center">Les posts de {{ detusers.name }} </h1>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-4"> -->
+<div class="row">
+    <div class="col-md-4 mx-auto my-5" *ngFor="let up of dup">
+        <h5 class="card-header text-center">Post N° {{up.id}}</h5>
+        <!-- <p class="card-text">{{ up.userId}}</p> -->
+        <h4>Title :</h4>
+        <p class="card-text">{{ up.title }}</p>
+        <h4>Body : </h4>
+        <p class="card-text">{{ up.body }}</p>
+        <a [routerLink]="['/posts', detusers.id]">detailposte</a>
+    </div>
+
+</div>
+<!-- </div>
+    </div>
+</div> -->

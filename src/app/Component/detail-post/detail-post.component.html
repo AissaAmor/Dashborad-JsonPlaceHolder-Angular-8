@@ -1,0 +1,20 @@
+<!-- <div *ngFor="let dp of detPosts"> -->
+<!-- <p class="card-text">{{ up.userId}}</p> -->
+<!-- <h5 class="card-header text-center">poste N° {{ dp.userId }}</h5>
+        <h4>Name :</h4><p class="card-text">{{dp.name}}</p>
+        <h4>Title :</h4><p class="card-text">{{ dp.email }}</p>
+        <h4>Body : </h4><p class="card-text">{{ dp.body }}</p>
+    </div> -->
+
+<h1 class="text-center text-primary">Les commentaires de ce poste</h1>
+<div class="row">
+    <div class="col-md-4 mx-auto my-5" *ngFor="let dp of detPosts">
+        <div class="card text-black bg-light mt-4">
+            <h4 class="card-header text-center text-primary">Post N°&nbsp;:&nbsp;{{dp.postId }}</h4>
+            <div class="card-body">
+                <h5 class="card-title">Name : {{dp.name}}</h5>
+                <p class="card-text">Email : {{ dp.email}}</p>
+                <p class="card-text">Body : {{ dp.body}}</p>
+            </div>
+        </div>
+</div>
